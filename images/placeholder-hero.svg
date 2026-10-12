@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#0c4a6e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#sky)"/>
+  <circle cx="1460" cy="300" r="130" fill="#f97316" opacity="0.9"/>
+  <path d="M0 900c320-180 640-270 960-270s640 90 960 270v180H0z" fill="#075985" opacity="0.7"/>
+  <path d="M0 990c320-90 640-135 960-135s640 45 960 135v90H0z" fill="#f97316" opacity="0.35"/>
+  <text x="960" y="1035" text-anchor="middle" font-family="system-ui, sans-serif" font-size="44" fill="#e2e8f0" opacity="0.85">Hero-Foto hier einfügen (images/hero.jpg)</text>
+</svg>
