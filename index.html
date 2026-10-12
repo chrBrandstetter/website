@@ -135,22 +135,16 @@
           Triathlon lebt von Partnerschaften – ich biete Sponsor:innen authentische
           Präsenz im Ausdauersport und ein glaubwürdiges Umfeld.
         </p>
-        <div class="cards">
-          <article class="card">
-            <h3>Sichtbarkeit</h3>
-            <p class="card-meta">Rennen · Social Media · Alltag</p>
-            <p>Logo auf Trikot und Material, Präsenz bei Wettkämpfen und in den sozialen Kanälen – dort, wo deine Zielgruppe trainiert und zuschaut.</p>
-          </article>
-          <article class="card">
-            <h3>Authentizität</h3>
-            <p class="card-meta">AgeGroup-Athlet mit echtem Profil</p>
-            <p>Ich bin kein Profi-Distanzler, sondern verbinde Training, Beruf und Alltag – genau das macht Sponsoring glaubwürdig und nahbar.</p>
-          </article>
-          <article class="card">
-            <h3>Maßgeschneiderte Pakete</h3>
-            <p class="card-meta">Produkt · Dienstleistung · Budget</p>
-            <p>Materielles Sponsoring, Dienstleistungen oder klassisches Budget – wir finden das Format, das zu deinen Zielen passt.</p>
-          </article>
+        <div class="suit-stage-wrap">
+          <div class="suit-stage">
+            <div id="trisuit3d" class="trisuit3d" aria-label="Interaktives 3D-Modell des Tri-Suits – Logo-Positionen anklicken"></div>
+            <p class="stage-hint">🖱️ Modell drehen (ziehen) · orange Felder anklicken für Preis &amp; Details</p>
+          </div>
+
+          <div class="zone-list-wrap">
+            <h3>Alle Logo-Positionen &amp; Preise</h3>
+            <div class="zone-list" id="zoneList"></div>
+          </div>
         </div>
         <div class="coach-note">
           <p>
@@ -171,6 +165,10 @@
           Melde dich – ich antworte so schnell wie möglich.
         </p>
         <form class="contact-form" id="contactForm" novalidate>
+          <label for="interest">Gewünschte Logo-Position</label>
+          <select id="interest" name="interest">
+            <option value="allgemein">Allgemeine Sponsoring-Anfrage</option>
+          </select>
           <label for="name">Name</label>
           <input type="text" id="name" name="name" placeholder="Dein Name" required />
           <label for="email">E-Mail</label>
@@ -191,6 +189,20 @@
     </div>
   </footer>
 
+  <!-- Zone-Detail Modal -->
+  <div class="modal-overlay" id="zoneModal" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="zoneModalTitle" tabindex="-1">
+      <button class="modal-close" id="zoneModalClose" type="button" aria-label="Schließen">✕</button>
+      <h3 id="zoneModalTitle">Logo-Position</h3>
+      <p class="modal-price" id="zoneModalPrice">€ 0</p>
+      <p class="modal-includes-title">Im Preis enthalten:</p>
+      <ul class="modal-includes" id="zoneModalIncludes"></ul>
+      <button type="button" class="btn btn-primary" id="zoneModalCta">Diese Position anfragen</button>
+    </div>
+  </div>
+
+  <script src="js/vendor/three.min.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/trisuit.js"></script>
 </body>
 </html>

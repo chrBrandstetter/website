@@ -42,6 +42,8 @@ python3 -m http.server 8000
 ## Längerfristige Erweiterungen (Ideen)
 
 - echte Inhalte/Erfolge (Resultate, Fotos)
+- echte Fotos für Hero und Galerie (`images/hero.jpg`, `images/foto-1.jpg`, …)
+- eigene Preisanpassung der Logo-Zonen (`js/main.js`, Array `TRISUIT_ZONES`)
 - **Coaching-Bereich** (nach Abschluss der Trainerausbildung)
 - Blog/Bereich für Trainingsberichte
 - Anbindung des Kontaktformulars an einen echten Mailversand
