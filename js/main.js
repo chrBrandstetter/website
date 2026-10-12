@@ -43,16 +43,16 @@
   };
 
   var TRISUIT_ZONES = [
-    { id: "brust", type: "brust", label: "Brust (vorn)", short: "Brust", price: 300 },
-    { id: "ruecken", type: "ruecken", label: "Rücken", short: "Rücken", price: 250 },
-    { id: "schulter-l", type: "schulter", label: "Schulter links", short: "Schulter L", price: 100 },
-    { id: "schulter-r", type: "schulter", label: "Schulter rechts", short: "Schulter R", price: 100 },
-    { id: "aermel-l", type: "aermel", label: "Ärmel links", short: "Ärmel L", price: 150 },
-    { id: "aermel-r", type: "aermel", label: "Ärmel rechts", short: "Ärmel R", price: 150 },
-    { id: "schenkel-l", type: "schenkel", label: "Oberschenkel links", short: "Schenkel L", price: 200 },
-    { id: "schenkel-r", type: "schenkel", label: "Oberschenkel rechts", short: "Schenkel R", price: 200 },
-    { id: "huefte-l", type: "huefte", label: "Hüfte links", short: "Hüfte L", price: 120 },
-    { id: "huefte-r", type: "huefte", label: "Hüfte rechts", short: "Hüfte R", price: 120 }
+    { id: "brust", type: "brust", label: "Brust (vorn)", short: "Brust", price: 300, no: 1 },
+    { id: "schulter-l", type: "schulter", label: "Schulter links", short: "Schulter L", price: 100, no: 2 },
+    { id: "schulter-r", type: "schulter", label: "Schulter rechts", short: "Schulter R", price: 100, no: 3 },
+    { id: "aermel-l", type: "aermel", label: "Ärmel links", short: "Ärmel L", price: 150, no: 4 },
+    { id: "aermel-r", type: "aermel", label: "Ärmel rechts", short: "Ärmel R", price: 150, no: 5 },
+    { id: "huefte-l", type: "huefte", label: "Hüfte links", short: "Hüfte L", price: 120, no: 6 },
+    { id: "huefte-r", type: "huefte", label: "Hüfte rechts", short: "Hüfte R", price: 120, no: 7 },
+    { id: "schenkel-l", type: "schenkel", label: "Oberschenkel links", short: "Schenkel L", price: 200, no: 8 },
+    { id: "schenkel-r", type: "schenkel", label: "Oberschenkel rechts", short: "Schenkel R", price: 200, no: 9 },
+    { id: "ruecken", type: "ruecken", label: "Rücken", short: "Rücken", price: 250, no: 10 }
   ];
 
   window.TRISUIT_ZONES = TRISUIT_ZONES;
@@ -72,6 +72,11 @@
     TRISUIT_ZONES.forEach(function (zone) {
       var item = document.createElement("article");
       item.className = "zone-item";
+      item.dataset.zone = zone.id;
+
+      var no = document.createElement("span");
+      no.className = "zone-no";
+      no.textContent = zone.no;
 
       var name = document.createElement("h4");
       name.textContent = zone.label;
@@ -88,10 +93,31 @@
         openZoneModal(zone.id);
       });
 
+      item.appendChild(no);
       item.appendChild(name);
       item.appendChild(price);
       item.appendChild(btn);
       zoneList.appendChild(item);
+    });
+
+    /* SVG-Zonen klickbar machen (inline geladene SVGs) */
+    document.querySelectorAll(".suit-view img").forEach(function (img) {
+      fetch(img.getAttribute("src"))
+        .then(function (r) { return r.text(); })
+        .then(function (svgText) {
+          var doc = new DOMParser().parseFromString(svgText, "image/svg+xml");
+          var svg = doc.documentElement;
+          svg.removeAttribute("width");
+          svg.removeAttribute("height");
+          img.replaceWith(svg);
+
+          svg.querySelectorAll(".zone-marker").forEach(function (marker) {
+            marker.addEventListener("click", function () {
+              openZoneModal(marker.dataset.zone);
+            });
+          });
+        })
+        .catch(function () {});
     });
   }
 

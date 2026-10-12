@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" class="suit-svg" role="img" aria-label="Tri-Suit Rückseite mit Logo-Position">
+  <defs>
+    <linearGradient id="fabricGradBack" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#334155"/>
+      <stop offset="1" stop-color="#1e293b"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Silhouette (wie Vorderseite) -->
+  <path id="halfBack" fill="url(#fabricGradBack)" stroke="#0f172a" stroke-width="2"
+    d="M150 30
+       C144 26 140 28 137 34
+       L112 40
+       C102 44 95 56 93 72
+       L87 114
+       C85 123 90 129 98 127
+       L110 121
+       C112 103 117 88 126 79
+       C119 106 114 140 113 174
+       C112 198 114 222 117 242
+       C114 272 112 302 110 330
+       L110 336
+       C110 342 116 344 122 342
+       L140 284
+       C145 276 148 272 150 271 Z"/>
+  <use href="#halfBack" transform="translate(300,0) scale(-1,1)"/>
+
+  <!-- Shorts -->
+  <path fill="#0f172a" opacity="0.9"
+    d="M117 242
+       C114 272 112 302 110 330
+       L110 336
+       C110 342 116 344 122 342
+       L140 284
+       C145 276 148 272 150 271
+       L150 244
+       C138 246 126 245 117 242 Z"/>
+
+  <!-- Racerback-Einsatz -->
+  <path d="M137 44 C130 90 132 150 140 200 C144 224 146 236 150 240 C154 236 156 224 160 200 C168 150 170 90 163 44 C158 38 142 38 137 44 Z"
+        fill="#0f172a" opacity="0.6"/>
+
+  <!-- Mittellinie -->
+  <line x1="150" y1="46" x2="150" y2="238" stroke="#0f172a" stroke-width="2" opacity="0.6"/>
+
+  <!-- Seitliche Akzentstreifen -->
+  <path d="M113 174 C112 198 114 222 117 242" stroke="#f97316" stroke-width="3" fill="none" opacity="0.7"/>
+  <path d="M187 174 C188 198 186 222 183 242" stroke="#f97316" stroke-width="3" fill="none" opacity="0.7"/>
+
+  <!-- Logo-Zone: Rücken -->
+  <g class="zone-marker" data-zone="ruecken"><title>Rücken – € 250</title>
+    <rect x="118" y="100" width="64" height="48"/>
+    <circle cx="180" cy="98" r="9" class="badge"/><text x="180" y="102" class="badge-num">10</text>
+  </g>
+</svg>
