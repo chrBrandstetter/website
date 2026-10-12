@@ -227,6 +227,107 @@ h2 { font-size: 2rem; margin-bottom: 0.6rem; }
   color: #7c2d12;
 }
 
+/* ---------- Gallery ---------- */
+.gallery-title {
+  margin-top: 3rem;
+  font-size: 1.35rem;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.4rem;
+  margin-top: 1.4rem;
+}
+
+.gallery-item {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.gallery-item img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-item figcaption {
+  padding: 0.7rem 1rem;
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+}
+
+.gallery-hint {
+  margin-top: 1.4rem;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  background: var(--card-bg);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius);
+  padding: 0.9rem 1.1rem;
+}
+
+.gallery-hint code {
+  background: #eef2f7;
+  border-radius: 6px;
+  padding: 0.1rem 0.4rem;
+  font-size: 0.85em;
+}
+
+/* ---------- Coaching single ---------- */
+.coaching-single {
+  display: grid;
+  grid-template-columns: minmax(0, 560px);
+  justify-content: center;
+}
+
+.coaching-card ul {
+  list-style: none;
+  display: grid;
+  gap: 0.5rem;
+  margin: 1.2rem 0;
+}
+
+.coaching-list li {
+  padding-left: 1.6rem;
+  position: relative;
+  color: var(--ink-soft);
+  font-size: 0.97rem;
+}
+
+.coaching-list li::before {
+  content: "\2713";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.price-tag {
+  border-top: 1px solid var(--border);
+  padding-top: 1.1rem;
+  margin-top: 0.4rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.price-amount {
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: var(--accent-dark);
+}
+
+.price-period {
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+}
+
 /* ---------- Kontakt / Form ---------- */
 .contact-form {
   display: grid;

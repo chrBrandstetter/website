@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#1e293b"/>
+  <circle cx="400" cy="255" r="70" fill="#f97316" opacity="0.9"/>
+  <path d="M120 480c80-70 160-105 240-105s160 35 240 105" stroke="#38bdf8" stroke-width="16" fill="none" stroke-linecap="round" opacity="0.85"/>
+  <path d="M120 510c80-40 160-60 240-60s160 20 240 60" stroke="#f97316" stroke-width="10" fill="none" stroke-linecap="round" opacity="0.6"/>
+  <text x="400" y="560" text-anchor="middle" font-family="system-ui, sans-serif" font-size="26" fill="#94a3b8">Foto hier einfügen (images/foto-1.jpg)</text>
+</svg>
