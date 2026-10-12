@@ -1,92 +1,88 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 340" class="suit-svg" role="img" aria-label="Tri-Suit Vorderseite mit Logo-Positionen">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 360" class="suit-svg" role="img" aria-label="Tri-Suit Vorderseite mit Logo-Positionen">
   <defs>
     <linearGradient id="fabricGrad" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#334155"/>
+      <stop offset="0" stop-color="#3b4b63"/>
       <stop offset="1" stop-color="#1e293b"/>
     </linearGradient>
+    <path id="suitHalfFront" d="
+      M150 36
+      C158 36 166 40 172 46
+      L190 54
+      C204 62 212 74 216 90
+      L210 120
+      C208 127 199 128 195 123
+      L188 100
+      C184 106 179 111 177 117
+      C171 146 168 172 167 194
+      C166 214 168 228 171 242
+      C173 264 175 292 174 314
+      C174 322 173 328 170 331
+      L158 324
+      C154 310 152 292 151 274
+      C150.7 268 150.3 267 150 266"/>
   </defs>
 
-  <!-- Tri-Suit: Torso mit kurzen Ärmeln + Shorts (nur das Kleidungsstück) -->
-  <path fill="url(#fabricGrad)" stroke="#0f172a" stroke-width="2.5"
-    d="M118 38
-       C118 32 136 26 150 26
-       C164 26 182 32 182 38
-       L182 52
-       L196 58
-       C204 62 208 70 206 80
-       L200 106
-       C198 114 190 116 184 112
-       L182 108
-       L182 118
-       C182 130 180 140 176 146
-       L176 168
-       C190 172 198 182 198 196
-       L198 260
-       C198 276 190 288 176 292
-       L160 296
-       C154 296 151 293 150 288
-       L150 240
-       L150 240
-       L150 288
-       C149 293 146 296 140 296
-       L124 292
-       C110 288 102 276 102 260
-       L102 196
-       C102 182 110 172 124 168
-       L124 146
-       C120 140 118 130 118 118
-       L118 108
-       L116 112
-       C110 116 102 114 100 106
-       L94 80
-       C92 70 96 62 104 58
-       L118 52 Z"/>
+  <!-- Anzug-Silhouette (beide Hälften) -->
+  <use href="#suitHalfFront" fill="url(#fabricGrad)" stroke="#0f172a" stroke-width="2.5"/>
+  <use href="#suitHalfFront" fill="url(#fabricGrad)" stroke="#0f172a" stroke-width="2.5" transform="translate(300,0) scale(-1,1)"/>
 
-  <!-- Kragen-Ausschnitt -->
-  <path d="M132 30 C138 27 162 27 168 30 C164 40 136 40 132 30 Z" fill="#0f172a"/>
+  <!-- Kragen vorne (Ausschnitt) -->
+  <path d="M136 42 C140 52 160 52 164 42 C158 38 142 38 136 42 Z" fill="#0f172a"/>
 
   <!-- Reißverschluss -->
-  <rect x="148.6" y="40" width="2.8" height="104" rx="1.4" fill="#f97316"/>
-  <circle cx="150" cy="146" r="3" fill="#f97316"/>
+  <rect x="148.7" y="50" width="2.6" height="112" rx="1.3" fill="#f97316"/>
+  <circle cx="150" cy="164" r="3.2" fill="#f97316"/>
 
-  <!-- Shorts-Abgrenzung -->
-  <path d="M124 168 C134 172 166 172 176 168" stroke="#0f172a" stroke-width="2" fill="none" opacity="0.7"/>
+  <!-- Ärmel-Abschlüsse -->
+  <path d="M195 123 L196 116 L207 118" fill="none" stroke="#0f172a" stroke-width="2" opacity="0.8"/>
+  <path d="M105 123 L104 116 L93 118" fill="none" stroke="#0f172a" stroke-width="2" opacity="0.8"/>
+
+  <!-- Bein-Abschlüsse (Silikonbund) -->
+  <path d="M170 331 L158 324" stroke="#f97316" stroke-width="3" fill="none" opacity="0.8"/>
+  <path d="M130 331 L142 324" stroke="#f97316" stroke-width="3" fill="none" opacity="0.8"/>
+
+  <!-- Schritt-Kontur -->
+  <path d="M144 258 L150 266 L156 258" fill="none" stroke="#0f172a" stroke-width="2" opacity="0.7"/>
+
+  <!-- Seitliche Akzentstreifen -->
+  <path d="M177 117 C171 146 168 172 167 194 C166 214 168 228 171 242" stroke="#f97316" stroke-width="2.5" fill="none" opacity="0.6"/>
+  <path d="M123 117 C129 146 132 172 133 194 C134 214 132 228 129 242" stroke="#f97316" stroke-width="2.5" fill="none" opacity="0.6"/>
 
   <!-- Logo-Zonen -->
   <g class="zone-marker" data-zone="brust"><title>Brust – € 300</title>
-    <rect x="122" y="82" width="56" height="30"/>
-    <circle cx="178" cy="80" r="9" class="badge"/><text x="178" y="84" class="badge-num">1</text>
+    <rect x="116" y="80" width="68" height="34"/>
+    <circle cx="184" cy="80" r="9" class="badge"/><text x="184" y="84" class="badge-num">1</text>
   </g>
   <g class="zone-marker" data-zone="schulter-l"><title>Schulter links – € 100</title>
-    <rect x="104" y="56" width="22" height="16"/>
-    <circle cx="124" cy="54" r="9" class="badge"/><text x="124" y="58" class="badge-num">2</text>
+    <rect x="110" y="44" width="16" height="14"/>
+    <circle cx="117" cy="38" r="9" class="badge"/><text x="117" y="42" class="badge-num">2</text>
   </g>
   <g class="zone-marker" data-zone="schulter-r"><title>Schulter rechts – € 100</title>
-    <rect x="174" y="56" width="22" height="16"/>
-    <circle cx="196" cy="54" r="9" class="badge"/><text x="196" y="58" class="badge-num">3</text>
+    <rect x="174" y="44" width="16" height="14"/>
+    <circle cx="183" cy="38" r="9" class="badge"/><text x="183" y="42" class="badge-num">3</text>
   </g>
   <g class="zone-marker" data-zone="aermel-l"><title>Ärmel links – € 150</title>
-    <rect x="102" y="78" width="18" height="26"/>
-    <circle cx="118" cy="76" r="9" class="badge"/><text x="118" y="80" class="badge-num">4</text>
+    <rect x="89" y="92" width="14" height="24"/>
+    <circle cx="86" cy="120" r="9" class="badge"/><text x="86" y="124" class="badge-num">4</text>
   </g>
   <g class="zone-marker" data-zone="aermel-r"><title>Ärmel rechts – € 150</title>
-    <rect x="180" y="78" width="18" height="26"/>
-    <circle cx="196" cy="76" r="9" class="badge"/><text x="196" y="80" class="badge-num">5</text>
+    <rect x="197" y="92" width="14" height="24"/>
+    <circle cx="214" cy="120" r="9" class="badge"/><text x="214" y="124" class="badge-num">5</text>
   </g>
   <g class="zone-marker" data-zone="huefte-l"><title>Hüfte links – € 120</title>
-    <rect x="106" y="176" width="22" height="24"/>
-    <circle cx="126" cy="174" r="9" class="badge"/><text x="126" y="178" class="badge-num">6</text>
+    <rect x="132" y="214" width="14" height="26"/>
+    <circle cx="128" cy="210" r="9" class="badge"/><text x="128" y="214" class="badge-num">6</text>
   </g>
   <g class="zone-marker" data-zone="huefte-r"><title>Hüfte rechts – € 120</title>
-    <rect x="172" y="176" width="22" height="24"/>
-    <circle cx="192" cy="174" r="9" class="badge"/><text x="192" y="178" class="badge-num">7</text>
+    <rect x="154" y="214" width="14" height="26"/>
+    <circle cx="172" cy="210" r="9" class="badge"/><text x="172" y="214" class="badge-num">7</text>
   </g>
   <g class="zone-marker" data-zone="schenkel-l"><title>Oberschenkel links – € 200</title>
-    <rect x="108" y="216" width="28" height="46"/>
-    <circle cx="134" cy="214" r="9" class="badge"/><text x="134" y="218" class="badge-num">8</text>
+    <rect x="128" y="268" width="16" height="40"/>
+    <circle cx="124" cy="264" r="9" class="badge"/><text x="124" y="268" class="badge-num">8</text>
   </g>
   <g class="zone-marker" data-zone="schenkel-r"><title>Oberschenkel rechts – € 200</title>
-    <rect x="164" y="216" width="28" height="46"/>
-    <circle cx="190" cy="214" r="9" class="badge"/><text x="190" y="218" class="badge-num">9</text>
+    <rect x="156" y="268" width="16" height="40"/>
+    <circle cx="176" cy="264" r="9" class="badge"/><text x="176" y="268" class="badge-num">9</text>
   </g>
 </svg>

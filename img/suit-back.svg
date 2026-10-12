@@ -1,61 +1,54 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 340" class="suit-svg" role="img" aria-label="Tri-Suit Rückseite mit Logo-Position">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 360" class="suit-svg" role="img" aria-label="Tri-Suit Rückseite mit Logo-Position">
   <defs>
     <linearGradient id="fabricGradBack" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#334155"/>
+      <stop offset="0" stop-color="#3b4b63"/>
       <stop offset="1" stop-color="#1e293b"/>
     </linearGradient>
+    <path id="suitHalfBack" d="
+      M150 36
+      C158 36 166 40 172 46
+      L190 54
+      C204 62 212 74 216 90
+      L210 120
+      C208 127 199 128 195 123
+      L188 100
+      C184 106 179 111 177 117
+      C171 146 168 172 167 194
+      C166 214 168 228 171 242
+      C173 264 175 292 174 314
+      C174 322 173 328 170 331
+      L158 324
+      C154 310 152 292 151 274
+      C150.7 268 150.3 267 150 266"/>
   </defs>
 
-  <!-- Tri-Suit-Rückseite (gleiche Silhouette) -->
-  <path fill="url(#fabricGradBack)" stroke="#0f172a" stroke-width="2.5"
-    d="M118 38
-       C118 32 136 26 150 26
-       C164 26 182 32 182 38
-       L182 52
-       L196 58
-       C204 62 208 70 206 80
-       L200 106
-       C198 114 190 116 184 112
-       L182 108
-       L182 118
-       C182 130 180 140 176 146
-       L176 168
-       C190 172 198 182 198 196
-       L198 260
-       C198 276 190 288 176 292
-       L160 296
-       C154 296 151 293 150 288
-       L150 288
-       C149 293 146 296 140 296
-       L124 292
-       C110 288 102 276 102 260
-       L102 196
-       C102 182 110 172 124 168
-       L124 146
-       C120 140 118 130 118 118
-       L118 108
-       L116 112
-       C110 116 102 114 100 106
-       L94 80
-       C92 70 96 62 104 58
-       L118 52 Z"/>
+  <!-- Anzug-Silhouette -->
+  <use href="#suitHalfBack" fill="url(#fabricGradBack)" stroke="#0f172a" stroke-width="2.5"/>
+  <use href="#suitHalfBack" fill="url(#fabricGradBack)" stroke="#0f172a" stroke-width="2.5" transform="translate(300,0) scale(-1,1)"/>
 
-  <!-- Kragen-Ausschnitt hinten (höher) -->
-  <path d="M130 30 C138 27 162 27 170 30 C168 42 132 42 130 30 Z" fill="#0f172a"/>
+  <!-- Kragen hinten (hoch geschnitten) -->
+  <path d="M136 40 C140 46 160 46 164 40 C158 36 142 36 136 40 Z" fill="#0f172a"/>
 
-  <!-- Racerback-Einsatz -->
-  <path d="M136 46 C132 90 134 140 142 164 C146 176 154 176 158 164 C166 140 168 90 164 46 C158 42 142 42 136 46 Z"
-        fill="#0f172a" opacity="0.55"/>
+  <!-- Mittelscheibe / Racerback-Einsatz -->
+  <path d="M150 46 L150 258" stroke="#0f172a" stroke-width="2" opacity="0.5"/>
+  <path d="M138 46 C134 96 136 150 144 200 C147 214 153 214 156 200 C164 150 166 96 162 46 Z"
+        fill="#0f172a" opacity="0.35"/>
 
-  <!-- Mittellinie -->
-  <line x1="150" y1="48" x2="150" y2="162" stroke="#0f172a" stroke-width="2" opacity="0.5"/>
+  <!-- Rückentaschen -->
+  <rect x="162" y="196" width="24" height="28" rx="6" fill="#0f172a" stroke="#f97316" stroke-width="1.5" opacity="0.9"/>
+  <rect x="114" y="196" width="24" height="28" rx="6" fill="#0f172a" stroke="#f97316" stroke-width="1.5" opacity="0.9"/>
 
-  <!-- Shorts-Abgrenzung -->
-  <path d="M124 168 C134 172 166 172 176 168" stroke="#0f172a" stroke-width="2" fill="none" opacity="0.7"/>
+  <!-- Ärmel-Abschlüsse -->
+  <path d="M195 123 L196 116 L207 118" fill="none" stroke="#0f172a" stroke-width="2" opacity="0.8"/>
+  <path d="M105 123 L104 116 L93 118" fill="none" stroke="#0f172a" stroke-width="2" opacity="0.8"/>
+
+  <!-- Bein-Abschlüsse (Silikonbund) -->
+  <path d="M170 331 L158 324" stroke="#f97316" stroke-width="3" fill="none" opacity="0.8"/>
+  <path d="M130 331 L142 324" stroke="#f97316" stroke-width="3" fill="none" opacity="0.8"/>
 
   <!-- Logo-Zone: Rücken -->
   <g class="zone-marker" data-zone="ruecken"><title>Rücken – € 250</title>
-    <rect x="126" y="66" width="48" height="52"/>
-    <circle cx="178" cy="64" r="9" class="badge"/><text x="178" y="68" class="badge-num">10</text>
+    <rect x="118" y="96" width="64" height="56"/>
+    <circle cx="182" cy="94" r="9" class="badge"/><text x="182" y="98" class="badge-num">10</text>
   </g>
 </svg>
